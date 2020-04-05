@@ -11,25 +11,25 @@ html, body {
   height: 100vh;
 }
 
-.page-container {
+#main-container {
   height: 100vh;
   ...
 }</pre>
   </li>
   <li>
-    Set the element that contains the side-bar and the main content to not scroll by setting <code>overflow-y: hidden</code>, and set the 
+    Set the element that contains the side-bar and the main content to not scroll by setting <code>overflow-y: hidden</code> to it, and set the 
     side-bar and main content to scroll independently by setting <code>overflow-y: auto</code> to both:
     <pre>
-.page-container {
+#main-container {
   overflow-y: hidden;
   ...
 }
 
-.side-menu-bar {
+#main-menu-bar {
   overflow-y: auto;
 }
 
-.page-content {
+#page-content {
   overflow-y: auto;
 }</pre>
   </li>

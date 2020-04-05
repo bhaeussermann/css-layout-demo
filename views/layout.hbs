@@ -2,20 +2,22 @@
 <html>
   <head>
     <title>CSS Layout - {{title}}</title>
+    <meta name="viewport" content="initial-scale=1">
     <link rel="stylesheet" href="/stylesheets/purecss/base-min.css" />
     <link rel="stylesheet" href="/stylesheets/purecss/menus-min.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <div class="page-container">
-      <div class="side-menu-bar pure-menu">
-        <span class="pure-menu-heading">CSS Layout</span>
+    <div id="main-container">
+      <div id="main-menu-bar" class="pure-menu">
+        <span id="main-menu-heading" class="pure-menu-heading">CSS Layout</span>
         <ul id="main-menu-list" class="pure-menu-list">
-          <li class="pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
-          <li class="pure-menu-item"><a href="/scrolling" class="pure-menu-link">Scrolling</a></li>
+          <li class="menu-item pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
+          <li class="menu-item pure-menu-item"><a href="/scrolling" class="pure-menu-link">Scrolling</a></li>
+          <li class="menu-item pure-menu-item"><a href="/media-queries" class="pure-menu-link">Media queries</a></li>
         </ul>
       </div>
-      <div class="page-content">
+      <div id="page-content">
         <h1>{{title}}</h1>
         {{{body}}}
       </div>

@@ -28,21 +28,42 @@ pre {
   padding: 5px;
 }
 
-.page-container {
+#main-container {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   overflow-y: hidden;
 }
 
-.side-menu-bar {
+#main-menu-bar {
   flex-shrink: 0;
   padding: 20px;
   overflow-y: auto;
   background-color: #F5F5F5;
 }
 
-.page-content {
+#page-content {
   flex-grow: 1;
   padding: 5px 50px;
   overflow-y: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #main-container {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  #main-menu-bar {
+    overflow-y: hidden;
+  }
+
+  #main-menu-heading, #main-menu-list, #main-menu-bar .menu-item {
+    display: inline-block;
+  }
+
+  #page-content {
+    overflow-y: hidden;
+  }
 }

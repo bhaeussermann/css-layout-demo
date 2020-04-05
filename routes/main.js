@@ -7,5 +7,8 @@ router.get('/', function(_req, res, _next) {
 router.get('/scrolling', function(_req, res, _next) {
   res.render('scrolling', { title: 'Scrolling' });
 });
+router.get('/media-queries', function(_req, res, _next) {
+  res.render('media-queries', { title: 'Media Queries' });
+});
 
 module.exports = router;

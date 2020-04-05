@@ -8,14 +8,14 @@ window.addEventListener('DOMContentLoaded', () => {
     linkElement.appendChild(document.createTextNode(itemText));
 
     const listElement = document.createElement('li');
-    listElement.setAttribute('class', 'pure-menu-item');
+    listElement.setAttribute('class', 'menu-item pure-menu-item');
     listElement.appendChild(linkElement);
 
     mainMenuList.appendChild(listElement);
   }
 
   for (let i = 0; i < 10; i++) {
-    addMenuItem('Extra Item');
-    addMenuItem('For Scrolling');
+    addMenuItem('<< Extra Item >>');
+    addMenuItem('<< For Scrolling >>');
   }
 });
