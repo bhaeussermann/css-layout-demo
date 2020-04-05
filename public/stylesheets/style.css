@@ -1,0 +1,14 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 3em;
+}
+
+a {
+  color: #00B7FF;
+}
