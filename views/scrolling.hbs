@@ -1,0 +1,36 @@
+<script src="/scripts/scrolling.js"></script>
+
+<p>Although not a modern CSS-feature, the side-bar and the main page content are styled so as to scroll independently. 
+  To see this in action, resize the browser window to be short enough so that scroll bars appear next to the side-bar and/or the main panel.</p>
+<p>The styling changes required to achieve this are:</p>
+<ul>
+  <li>
+    Identify all the ancestor-elements of the side-bar and the main content and set their height to be equal to the view-port:
+    <pre>
+html, body {
+  height: 100vh;
+}
+
+.page-container {
+  height: 100vh;
+  ...
+}</pre>
+  </li>
+  <li>
+    Set the element that contains the side-bar and the main content to not scroll by setting <code>overflow-y: hidden</code>, and set the 
+    side-bar and main content to scroll independently by setting <code>overflow-y: auto</code> to both:
+    <pre>
+.page-container {
+  overflow-y: hidden;
+  ...
+}
+
+.side-menu-bar {
+  overflow-y: auto;
+}
+
+.page-content {
+  overflow-y: auto;
+}</pre>
+  </li>
+</ul>
