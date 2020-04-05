@@ -13,16 +13,20 @@ h1 {
   font-size: 3em;
 }
 
+p {
+  text-align: center;
+}
+
 a {
   color: #00B7FF;
 }
 
-.menu-container {
+.page-container {
   display: flex;
   height: 100%;
 }
 
-.menu-bar {
+.side-menu-bar {
   min-height: 100%;
   padding: 20px;
   background-color: #F5F5F5;
