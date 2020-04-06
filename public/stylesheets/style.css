@@ -1,7 +1,3 @@
-html, body {
-  height: 100vh;
-}
-
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -28,42 +24,11 @@ pre {
   padding: 5px;
 }
 
-#main-container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  overflow-y: hidden;
-}
-
 #main-menu-bar {
-  flex-shrink: 0;
   padding: 20px;
-  overflow-y: auto;
   background-color: #F5F5F5;
 }
 
 #page-content {
-  flex-grow: 1;
   padding: 5px 50px;
-  overflow-y: auto;
-}
-
-@media only screen and (max-width: 768px) {
-  #main-container {
-    flex-direction: column;
-    height: auto;
-    overflow-y: auto;
-  }
-
-  #main-menu-bar {
-    overflow-y: hidden;
-  }
-
-  #main-menu-heading, #main-menu-list, #main-menu-bar .menu-item {
-    display: inline-block;
-  }
-
-  #page-content {
-    overflow-y: hidden;
-  }
 }

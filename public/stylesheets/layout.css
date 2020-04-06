@@ -1,0 +1,40 @@
+html, body {
+  height: 100vh;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+#main-menu-bar {
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+#page-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #main-container {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  #main-menu-bar {
+    overflow-y: hidden;
+  }
+
+  #main-menu-heading, #main-menu-list, #main-menu-bar .menu-item {
+    display: inline-block;
+  }
+
+  #page-content {
+    overflow-y: hidden;
+  }
+}
