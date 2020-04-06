@@ -10,5 +10,8 @@ router.get('/scrolling', function(_req, res, _next) {
 router.get('/media-queries', function(_req, res, _next) {
   res.render('media-queries', { title: 'Media Queries' });
 });
+router.get('/flexbox', function(_req, res, _next) {
+  res.render('flexbox', { title: 'Flexbox' });
+});
 
 module.exports = router;

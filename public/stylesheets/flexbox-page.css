@@ -1,0 +1,29 @@
+.menu-bar {
+  padding: 5px;
+  background-color: #F5F5F5;
+}
+
+.menu-bar > .menu-bar-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.login-item {
+  margin-left: auto;
+}
+
+.box {
+  display: flex;
+  height: 120px;
+  background-color: #EFF0F1;
+}
+
+.center {
+  margin: auto;
+}
+
+button {
+  padding: 5px;
+  background-color: #F5F5F5;
+}
