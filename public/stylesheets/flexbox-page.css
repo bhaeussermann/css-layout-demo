@@ -13,14 +13,12 @@
   margin-left: auto;
 }
 
-.box {
+.centering-box {
   display: flex;
+  align-items: center;
+  justify-content: center;
   height: 120px;
   background-color: #EFF0F1;
-}
-
-.center {
-  margin: auto;
 }
 
 button {

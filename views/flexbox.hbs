@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/stylesheets/flexbox-page.css" />
 
 <p>Flexbox layout makes it easy to lay out a list of items in a number of different ways. In this example, for instance, having the "Log in" 
-item be aligned to the right is a simple matter of setting its left-margin to "auto".</p>
+  item be aligned to the right is a simple matter of setting its left-margin to "auto".</p>
 
 <div class="menu-bar pure-menu pure-menu-horizontal">
   <ul class="menu-bar-list pure-menu-list">
@@ -17,8 +17,17 @@ item be aligned to the right is a simple matter of setting its left-margin to "a
 </div>
 
 <p>Centering things used to be one of the notoriously difficult things to do in CSS. With flexbox, we can now easily center elements 
-  (both horizontally and vertically!) by simply setting all the margins to "auto".</p>
+  (both horizontally and vertically!)</p>
 
-<div class="box">
-  <button class="center">Meet me in the middle</button>
+<div class="centering-box">
+  <button>Meet me in the middle</button>
 </div>
+
+<p>This is achieved by setting the following properties on the container's class:</p>
+
+<pre>
+.centering-box {
+  display: flex;
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+}</pre>
