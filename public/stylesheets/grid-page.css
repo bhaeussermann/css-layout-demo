@@ -1,0 +1,35 @@
+/* Layout */
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 210px);
+  grid-gap: 20px;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 150px;
+}
+
+.long {
+  grid-row: auto / span 2;
+}
+
+/* Styling */
+
+.app {
+  cursor: pointer;
+  color: #606060;
+  background-color: #EAEAFF;
+  border-color: #ccccff;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 8px;
+}
+
+.app:hover {
+  background-color: #EEEEFF;
+}

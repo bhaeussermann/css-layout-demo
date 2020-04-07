@@ -13,5 +13,8 @@ router.get('/media-queries', function(_req, res, _next) {
 router.get('/flexbox', function(_req, res, _next) {
   res.render('flexbox', { title: 'Flexbox' });
 });
+router.get('/grid', function(_req, res, _next) {
+  res.render('grid', { title: 'Grid' });
+});
 
 module.exports = router;
