@@ -5,10 +5,11 @@
 <div class="tabs">
   <button class="tab tab-active" data-tab-id="menu-tab-content">Menu</button>
   <button class="tab" data-tab-id="centering-tab-content">Centering</button>
+  <button class="tab" data-tab-id="sidebar-tab-content">Side-bar</button>
 </div>
 
 <div id="menu-tab-content" class="tab-content tab-content-active">
-  <p>Flexbox layout makes it easy to lay out a list of items in a number of different ways. In this example, for instance, having the 
+  <p>Flexbox layout makes it easy to lay out a list of items in a number of different ways. In this example, having the 
     &ldquo;Log in&rdquo; item be aligned to the right is a simple matter of setting <code>margin-left: auto</code>.</p>
 
   <div class="menu-bar pure-menu pure-menu-horizontal">
@@ -41,4 +42,32 @@
     align-items: center; /* Centers content vertically */
     justify-content: center; /* Centers content horizontally */
   }</pre>
+</div>
+
+<div id="sidebar-tab-content" class="tab-content">
+  <p>The layout of the side-bar is achieved using flexbox layout as follows:</p>
+  <pre>
+#main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+#main-menu-bar {
+  flex-shrink: 0;
+}
+
+#page-content {
+  flex-grow: 1;
+}
+  </pre>
+  <p>When the window gets resized to a smaller width, we simply set <code>flex-direction: column</code>:</p>
+  <pre>
+@media only screen and (max-width: 768px) {
+  #main-container {
+    flex-direction: column;
+    height: auto;
+  }
+}
+  </pre>
 </div>
