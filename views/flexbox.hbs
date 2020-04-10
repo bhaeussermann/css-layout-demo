@@ -6,6 +6,7 @@
   <button class="tab tab-active" data-tab-id="menu-tab-content">Menu</button>
   <button class="tab" data-tab-id="centering-tab-content">Centering</button>
   <button class="tab" data-tab-id="sidebar-tab-content">Side-bar</button>
+  <button class="tab" data-tab-id="cards-tab-content">Cards</button>
 </div>
 
 <div id="menu-tab-content" class="tab-content tab-content-active">
@@ -70,4 +71,40 @@
   }
 }
   </pre>
+</div>
+
+<div id="cards-tab-content" class="tab-content">
+  <p>Flexbox is ideal for implementing side-by-side cards. It provides responsive wrapping of the cards and ensures that all cards on
+    a single row share the same height. Also, aligning the "Purchase movie" link at the bottom of each card is achieved with flexbox 
+    layout within the card itself by setting <code>margin-top: auto</code> on the link element.
+  </p>
+  <div class="cards-container">
+    <div class="card">
+      <div class="card-title">Angels With Filthy Souls</div>
+      <div class="card-detail">A real classic from the gangster film noir genre. You can’t go wrong with characters named Acey and Snakes and dialogue like, 
+        <em>&ldquo;I'm gonna give ya till the count of ten to get yer ugly, yella, no good keister off my property before I pump yer guts 
+        fulla lead!&rdquo;</em></div>
+      <div class="card-link"><a>Purchase movie</a></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Werewolf Women of the SS</div>
+      <div class="card-detail">A brilliant achievement in motion picture history. Finally, the truth about Hitler's diabolical plans to create a
+        race of superwomen can be told.</div>
+      <div class="card-link"><a>Purchase movie</a></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Firestorm</div>
+      <div class="card-detail">Prepare for more action than you can handle. From an underwater escape, to a helicopter landing on a car, to
+        jumping out of a plane and shooting back up at them while falling, this one has it all!</div>
+      <div class="card-link"><a>Purchase movie</a></div>
+    </div>
+    <div class="card">
+      <div class="card-title">The Legend of Zelda</div>
+      <div class="card-detail">An epic fantasy adventure film along the lines of Lord of the Rings based on the popular video game franchise
+        of the same name. With this movie Hollywood may just have achieved what had eluded the film studio up to this point: making a good 
+        video game movie.
+      </div>
+      <div class="card-link"><a>Purchase movie</a></div>
+    </div>
+  </div>
 </div>
