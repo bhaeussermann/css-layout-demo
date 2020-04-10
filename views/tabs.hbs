@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/stylesheets/tabs.css" />
+<script src="/scripts/tabs.js"></script>
+
+<div class="tabs">
+  <button class="tab tab-active" data-tab-id="general-tab-content">General</button>
+  <button class="tab" data-tab-id="focusable-tabs-tab-content">Making tabs focusable</button>
+  <button class="tab" data-tab-id="prevent-gaps-tab-content">Preventing gaps between tabs</button>
+  <button class="tab" data-tab-id="hover-transition-effect-tab-content">Hover transition effect</button>
+</div>
+
+<div id="general-tab-content" class="tab-content tab-content-active">
+  <p>Though not a built-in feature of HTML or CSS, tabs can be easily implemented using just a bit of javascript and CSS styling.</p>
+  <p>Given a generic script and set of CSS classes (see <code>tabs.js</code> and <code>tabs.css</code>), the only requirement to achieve tabs is to use the appropriate structure and
+    CSS classes in the HTML, such as the following:</p>
+
+  <pre>&lt;div class=&quot;tabs&quot;&gt;
+  &lt;button class=&quot;tab tab-active&quot; data-tab-id=&quot;tab-one-content&quot;&gt;One&lt;/button&gt;
+  &lt;button class=&quot;tab&quot; data-tab-id=&quot;tab-two-content&quot;&gt;Two&lt;/button&gt;
+  &lt;button class=&quot;tab&quot; data-tab-id=&quot;tab-three-content&quot;&gt;Three&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;tab-one-content&quot; class=&quot;tab-content tab-content-active&quot;&gt;
+  ...
+&lt;/div&gt;
+&lt;div id=&quot;tab-two-content&quot; class=&quot;tab-content&quot;&gt;
+  ...
+&lt;/div&gt;
+&lt;div id=&quot;tab-three-content&quot; class=&quot;tab-content&quot;&gt;
+&lt;/div&gt;</pre>
+
+  <p>The javascript code shows and hides the appropriate content <code>&lt;div&gt;</code>s based on which tab is clicked.</p>
+</div>
+
+<div id="focusable-tabs-tab-content" class="tab-content">
+  <p>There is a specific reason for making the tabs <code>&lt;button&gt;</code> elements rather than something like a <code>&lt;div&gt;</code>.
+    This makes it so that the tabs can be focused using the keyboard by pressing the "Tab" key, and then activated
+    by pressing Enter.</p>
+</div>
+
+<div id="prevent-gaps-tab-content" class="tab-content">
+  <p>The <code>display: inline-block</code> CSS property makes the tabs appear next to each other. But this causes the whitespace between the
+    <code>&lt;button&gt;</code> elements in the HTML to be rendered as small gaps between the buttons on the page.</p>
+  <p>To counteract this, flexbox layout comes to the rescue once again! Setting the tab-container's layout to <code>display: flex</code>
+    eliminates the gaps.
+  </p>
+</div>
+
+<div id="hover-transition-effect-tab-content" class="tab-content">
+  <p>The nice transition-effect seen when hovering over the tabs, is achieved by simply setting the <code>transition</code> CSS property on the 
+  relevant style rules:</p>
+  <pre>
+.tab {
+  transition: 0.3s;
+  ...
+}
+
+.tab:hover, .tab:focus {
+  transition: 0.3s;
+  ...
+}
+  </pre>
+</div>
+
+</div>

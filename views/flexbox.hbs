@@ -1,33 +1,44 @@
 <link rel="stylesheet" href="/stylesheets/flexbox-page.css" />
+<link rel="stylesheet" href="/stylesheets/tabs.css" />
+<script src="/scripts/tabs.js"></script>
 
-<p>Flexbox layout makes it easy to lay out a list of items in a number of different ways. In this example, for instance, having the "Log in" 
-  item be aligned to the right is a simple matter of setting <code>margin-left: auto</code>.</p>
-
-<div class="menu-bar pure-menu pure-menu-horizontal">
-  <ul class="menu-bar-list pure-menu-list">
-    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
-    <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Features</a></li>
-    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Themes</a></li>
-    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Plans</a></li>
-    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
-    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Support</a></li>
-    <li class="login-item pure-menu-item"><a href="#" class="pure-menu-link">Log in</a></li>
-  </ul>
+<div class="tabs">
+  <button class="tab tab-active" data-tab-id="menu-tab-content">Menu</button>
+  <button class="tab" data-tab-id="centering-tab-content">Centering</button>
 </div>
 
-<p>Centering things used to be one of the notoriously difficult things to do in CSS. With flexbox, we can now easily center elements 
-  (both horizontally and vertically!)</p>
+<div id="menu-tab-content" class="tab-content tab-content-active">
+  <p>Flexbox layout makes it easy to lay out a list of items in a number of different ways. In this example, for instance, having the 
+    &ldquo;Log in&rdquo; item be aligned to the right is a simple matter of setting <code>margin-left: auto</code>.</p>
 
-<div class="centering-box">
-  <button>Meet me in the middle</button>
+  <div class="menu-bar pure-menu pure-menu-horizontal">
+    <ul class="menu-bar-list pure-menu-list">
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Features</a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Themes</a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Plans</a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
+      <li class="pure-menu-item"><a href="#" class="pure-menu-link">Support</a></li>
+      <li class="login-item pure-menu-item"><a href="#" class="pure-menu-link">Log in</a></li>
+    </ul>
+  </div>
 </div>
 
-<p>This is achieved by setting the following properties on the container's class:</p>
+<div id="centering-tab-content" class="tab-content">
+  <p>Centering things used to be one of the notoriously difficult things to do in CSS. With flexbox, we can now easily center elements 
+    (both horizontally and vertically!)</p>
 
-<pre>
-.centering-box {
-  display: flex;
-  align-items: center; /* Centers content vertically */
-  justify-content: center; /* Centers content horizontally */
-}</pre>
+  <div class="centering-box">
+    <button>Meet me in the middle</button>
+  </div>
+
+  <p>This is achieved by setting the following properties on the container's class:</p>
+
+  <pre>
+  .centering-box {
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+  }</pre>
+</div>
