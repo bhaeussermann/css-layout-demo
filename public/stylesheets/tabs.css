@@ -18,6 +18,7 @@
 
 .tab:hover, .tab:focus {
   background-color: #DDDDDD;
+  outline: 0;
   transition: 0.3s;
 }
 
