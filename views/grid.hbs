@@ -1,23 +1,96 @@
 <link rel="stylesheet" href="/stylesheets/grid-page.css" />
+<link rel="stylesheet" href="/stylesheets/tabs.css" />
+<script src="/scripts/tabs.js"></script>
 
-<p>Grid layout allows for arranging elements in a 2-dimensional grid. It provides a number of powerful features, such has allowing certain
-  elements to span multiple rows or columns.</p>
+<div class="tabs">
+  <button class="tab tab-active" data-tab-id="tiles-content">Tiles</button>
+  <button class="tab" data-tab-id="responsive-layout-content">Responsive layout</button>
+</div>
 
-<div class="apps-grid">
-  <div class="app">Dwellement</div>
-  <div class="app">VivaBeachLife</div>
-  <div class="app">From Start To Furnish</div>
-  <div class="app">ChiselAndClick</div>
-  <div class="app">TurnKeyStylings</div>
-  <div class="app">TheDesignAlley</div>
-  <div class="app long">Savois-Faire</div>
-  <div class="app">Enrich Space</div>
-  <div class="app">Bright Layout</div>
-  <div class="app">Furnish Fab</div>
-  <div class="app">Arrow And Knot</div>
-  <div class="app">Tru Artisan</div>
-  <div class="app">Ivy Range</div>
-  <div class="app">Ninja Vector</div>
-  <div class="app">Synergific</div>
-  <div class="app">Vybsy</div>
+<div id="tiles-content" class="tab-content tab-content-active">
+  <p>Grid layout enables having items responsively span multiple rows, all while remaining aligned in columns.</p>
+
+  <div class="apps-grid">
+    <div class="app">Dwellement</div>
+    <div class="app">VivaBeachLife</div>
+    <div class="app">From Start To Furnish</div>
+    <div class="app">ChiselAndClick</div>
+    <div class="app">TurnKeyStylings</div>
+    <div class="app">TheDesignAlley</div>
+    <div class="app long">Savois-Faire</div>
+    <div class="app">Enrich Space</div>
+    <div class="app">Bright Layout</div>
+    <div class="app">Furnish Fab</div>
+    <div class="app">Arrow And Knot</div>
+    <div class="app">Tru Artisan</div>
+    <div class="app">Ivy Range</div>
+    <div class="app">Ninja Vector</div>
+    <div class="app">Synergific</div>
+    <div class="app">Vybsy</div>
+  </div>
+
+  <p>This effect of stretching the items to fill the rows is achieved by setting the following properties on the container class:</p>
+
+  <pre>.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}</pre>
+</div>
+
+<div id="responsive-layout-content" class="tab-content">
+  <p>With grid layout, implementing sophisticated responsive layout changes becomes easy: Just specify an alternative <code>grid-template</code>
+  in the media query.</p>
+
+  <div class="person-container">
+    <img class="person-image" src="/content/person.jpg">
+
+    <div class="person-header">
+      <div class="person-name">Jon E Tucker</div>
+      <div class="person-occupation">Electric Motor &amp; Power Tool Repairman</div>
+    </div>
+
+    <div class="person-contact">
+      <div><a href="mailto:adolph_fries@gmail.com">adolph_fries@gmail.com</a></div>
+      <div>085 477 7186</div>
+    </div>
+
+    <div class="person-bio">
+      Traits:
+      <ul>
+        <li>Avid writer</li>
+        <li>Incurable introbert</li>
+        <li>Subtly charming alcohol maven</li>
+        <li>Passionate coffee expert</li>
+        <li>Evil music nerd</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>The relevant CSS rules used here look as follows:</p>
+
+  <pre>.person-container {
+  display: grid;
+  grid-template: 
+    'image    header' auto 
+    'image    bio'    auto 
+    'contact  bio'    1fr /
+    220px       1fr;
+  grid-gap: 20px;
+}
+
+@media only screen and (max-width: 520px) {
+  .person-container {
+    grid-template: 
+      'image    header'   auto 
+      'contact  contact'  auto 
+      'bio      bio'      auto /
+      100px       1fr;
+  }
+}</pre>
+
+  <p>Every item of the grid then has its <code>grid-area</code> assigned as follows:</p>
+
+  <pre>.person-header {
+  grid-area: header;
+}</pre>
 </div>
