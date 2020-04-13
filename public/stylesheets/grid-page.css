@@ -19,7 +19,12 @@
 }
 
 .person-container {
-  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.person-card {
+  padding: 20px;
   display: grid;
   grid-template: 
     'image    header' auto 
@@ -30,7 +35,7 @@
 }
 
 @media only screen and (max-width: 560px) {
-  .person-container {
+  .person-card {
     grid-template: 
       'image    header'   auto 
       'contact  contact'  auto 
@@ -70,6 +75,10 @@
 
 .app:hover {
   background-color: #EEEEFF;
+}
+
+.person-card {
+  box-shadow: 0 5px 16px 2px rgba(0, 0, 0, 0.2);
 }
 
 .person-name {
