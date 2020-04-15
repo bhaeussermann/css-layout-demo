@@ -33,4 +33,15 @@ html, body {
   overflow-y: auto;
 }</pre>
   </li>
+  <li>
+    Unfortunately, this will make it so that the content-div will no longer scroll in response to pressing the arrows on the keyboard &mdash; not
+    until you click on it to focus it. Luckily, we can focus the content-div programmatically, which will re-enable scrolling using the arrows.<br />
+    First, we make the content-div focusable by setting a tabindex to it:
+    <pre>&lt;div id=&quot;page-content&quot; tabindex=&quot;0&quot;&gt;
+...</pre>
+    Then, we add the following bit of javascript to focus this div after page-load:
+    <pre>window.addEventListener('DOMContentLoaded', _ => {
+  document.getElementById('page-content').focus();
+});</pre>
+  </li>
 </ul>
