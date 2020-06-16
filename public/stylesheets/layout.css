@@ -39,7 +39,7 @@ html, body {
   }
 
   #main-menu-heading, #main-menu-list, #main-menu-bar .menu-item {
-    display: inline-block;
+    float: left;
   }
 
   #page-content {
