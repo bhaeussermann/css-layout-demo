@@ -1,5 +1,6 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
+
+const router = Router();
 
 const pages = [
   {
@@ -26,4 +27,4 @@ for (const page of pages) {
   });
 }
 
-module.exports = router;
+export default router;
