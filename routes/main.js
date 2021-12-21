@@ -6,7 +6,7 @@ const pages = [
   {
     route: '/',
     name: 'index',
-    title: 'CSS Layout',
+    title: 'Home',
     sideBarText: 'Home'
   },
   { name: 'flexbox', title: 'Flexbox' },
