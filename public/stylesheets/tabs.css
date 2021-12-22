@@ -1,10 +1,30 @@
+:root {
+  --tabs-background-color: #F1F1F1;
+  --tabs-border-color: #CCCCCC;
+  --tab-background-color: #F1F1F1;
+  --tab-hover-background-color: #DDDDDD;
+  --tab-active-background-color: #CCCCCC;
+  --tab-content-border-color: #CCCCCC;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tabs-background-color: #0E0E0E;
+    --tabs-border-color: #333333;
+    --tab-background-color: #0E0E0E;
+    --tab-hover-background-color: #222222;
+    --tab-active-background-color: #333333;
+    --tab-content-border-color: #333333;
+  }
+}
+
 .tabs {
   display: flex;
   flex-wrap: wrap;
-  background-color: #F1F1F1;
+  background-color: var(--tabs-background-color);
   border-width: 1px 1px 0 1px;
   border-style: solid;
-  border-color: #CCCCCC;
+  border-color: var(--tabs-border-color);
 }
 
 .tab {
@@ -12,23 +32,26 @@
   cursor: pointer;
   margin: 0;
   padding: 15px;
+  background-color: var(--tab-background-color);
   border: none;
   transition: 0.3s;
 }
 
 .tab:hover, .tab:focus {
-  background-color: #DDDDDD;
+  background-color: var(--tab-hover-background-color);
   outline: 0;
   transition: 0.3s;
 }
 
 .tab-active {
-  background-color: #CCCCCC;
+  background-color: var(--tab-active-background-color);
 }
 
 .tab-content {
   display: none;
-  border: 1px solid #CCCCCC;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--tab-content-border-color);
   padding: 0 10px;
 }
 

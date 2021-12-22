@@ -63,22 +63,49 @@
 
 /* Styling */
 
+:root {
+  --app-text-color: #606060;
+  --app-border-color: #CCCCFF;
+  --app-background-color: #EAEAFF;
+  --app-hover-border-color: #E0E0FF;
+  --app-hover-background-color: #EEEEFF;
+  --secondary-text-color: gray;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-text-color: #9F9f9F;
+    --app-border-color: #202033;
+    --app-background-color: #0C0C15;
+    --app-hover-border-color: #101022;
+    --app-hover-background-color: #000011;
+    --secondary-text-color: gray;
+  }
+}
+
 .app {
   cursor: pointer;
-  color: #606060;
-  background-color: #EAEAFF;
-  border-color: #ccccff;
+  color: var(--app-text-color);
+  background-color: var(--app-background-color);
+  border-color: var(--app-border-color);
   border-style: solid;
   border-width: 3px;
   border-radius: 8px;
 }
 
 .app:hover {
-  background-color: #EEEEFF;
+  background-color: var(--app-hover-background-color);
+  border-color: var(--app-hover-border-color);
 }
 
 .person-card {
   box-shadow: 0 5px 16px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .person-card {
+    box-shadow: 0 5px 16px 2px rgba(255, 255, 255, 0.2);
+  }
 }
 
 .person-name {
@@ -87,7 +114,7 @@
 }
 
 .person-occupation {
-  color: gray;
+  color: var(--secondary-text-color);
 }
 
 .person-contact {

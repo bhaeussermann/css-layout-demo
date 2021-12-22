@@ -1,5 +1,27 @@
+:root {
+  --text-color: black;
+  --main-background-color: white;
+  --link-color: #00B7FF;
+  --code-background-color: #EFF0F1;
+  --menubar-background-color: #F5F5F5;
+  --menuitem-hover-background-color: #E0E0E0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #D0D0D0;
+    --main-background-color: black;
+    --link-color: #005B7F;
+    --code-background-color: #181615;
+    --menubar-background-color: #181818;
+    --menuitem-hover-background-color: #202020;
+  }
+}
+
 body {
   font: 18px Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--main-background-color);
 }
 
 h1 {
@@ -9,11 +31,11 @@ h1 {
 }
 
 a {
-  color: #00B7FF;
+  color: var(--link-color);
 }
 
 pre, code {
-  background-color: #EFF0F1;
+  background-color: var(--code-background-color);
 }
 
 code {
@@ -25,5 +47,9 @@ pre {
 }
 
 #main-menu-bar {
-  background-color: #F5F5F5;
+  background-color: var(--menubar-background-color);
+}
+
+.menu-item > a:hover {
+  background-color: var(--menuitem-hover-background-color);
 }

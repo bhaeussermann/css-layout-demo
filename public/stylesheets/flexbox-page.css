@@ -1,6 +1,20 @@
+:root {
+  --centering-box-background-color: #EFF0F1;
+  --button-background-color: #F5F5F5;
+  --button-border-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --centering-box-background-color: #181615;
+    --button-background-color: #181818;
+    --button-border-color: #303030;
+  }
+}
+
 .menu-bar {
   padding: 5px;
-  background-color: #F5F5F5;
+  background-color: var(--menubar-background-color);
 }
 
 .menu-bar > .menu-bar-list {
@@ -18,12 +32,13 @@
   align-items: center;
   justify-content: center;
   height: 120px;
-  background-color: #EFF0F1;
+  background-color: var(--centering-box-background-color);
 }
 
 button {
   padding: 5px;
-  background-color: #F5F5F5;
+  background-color: var(--button-background-color);
+  border-color: var(--button-border-color);
 }
 
 .cards-container {
@@ -41,6 +56,12 @@ button {
   width: 250px;
   min-height: 250px;
   box-shadow: 0 5px 16px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    box-shadow: 0 5px 16px 2px rgba(255, 255, 255, 0.2);
+  }
 }
 
 .card-title {
