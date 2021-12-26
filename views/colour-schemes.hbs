@@ -1,0 +1,35 @@
+<p>The <code>prefers-color-scheme</code> media directive allows to set alternative colours for elements based on whether the user has his
+operating system / browser set to dark mode or light mode.</p>
+
+<p>Here's a simple example that sets the text colour based on the current preference:</p>
+
+<pre>
+body {
+  color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #D0D0D0;
+  }
+}
+</pre>
+
+A more maintainable way of setting different colours for different elements is by assigning the colours to CSS variables based on the user's
+preference and referencing the variables in the relevant CSS rules:
+
+<pre>
+:root {
+  --text-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #D0D0D0;
+  }
+}
+
+body {
+  color: var(--text-color);
+}
+</pre>

@@ -13,7 +13,8 @@ const pages = [
   { name: 'grid', title: 'Grid' },
   { name: 'media-queries', title: 'Media queries' },
   { name: 'scrolling', title: 'Scrolling' },
-  { name: 'tabs', title: 'Tabs' }
+  { name: 'tabs', title: 'Tabs' },
+  { name: 'colour-schemes', title: 'Colour schemes' }
 ];
 
 for (const page of pages) {
