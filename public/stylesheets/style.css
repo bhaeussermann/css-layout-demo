@@ -1,6 +1,4 @@
 :root {
-  --text-color: black;
-  --main-background-color: white;
   --link-color: #00B7FF;
   --code-background-color: #EFF0F1;
   --menubar-background-color: #F5F5F5;
@@ -9,8 +7,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text-color: #D0D0D0;
-    --main-background-color: black;
     --link-color: #005B7F;
     --code-background-color: #181615;
     --menubar-background-color: #181818;
@@ -20,8 +16,6 @@
 
 body {
   font: 18px Arial, sans-serif;
-  color: var(--text-color);
-  background-color: var(--main-background-color);
 }
 
 h1 {
