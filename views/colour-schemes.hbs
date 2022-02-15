@@ -1,7 +1,17 @@
 <p>The <code>prefers-color-scheme</code> media directive allows to set alternative colours for elements based on whether the user has his
 operating system / browser set to dark mode or light mode.</p>
 
-<p>Here's a simple example that sets the text colour based on the current preference:</p>
+<p>First, add the &ldquo;color-scheme&rdquo; meta tag to your page's header to tell the browser that the page supports both the light and dark
+colour schemes:</p>
+
+<pre>
+&lt;meta name=&quot;color-scheme&quot; content=&quot;light dark&quot;&gt;
+</pre>
+
+<p>This will apply the default background and text colours of the applicable colour scheme (even before the CSS is loaded).</p>
+
+<p>Here's a simple example of using the <code>prefers-color-scheme</code> media directive that sets the text colour based on the current
+colour scheme preference:</p>
 
 <pre>
 body {
